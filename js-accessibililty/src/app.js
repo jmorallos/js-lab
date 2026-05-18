@@ -1,14 +1,11 @@
-const root = document.getElementById('app');
-if(!root) throw new Error("Root element not found");
+import { initializeApp } from '../src/js/bootstrap.js';
+import { createAppShell } from '../src/js/appshell.js';
 
-function renderApp() {
-  root.innerHTML = '';
-  const h1 = document.createElement('h1');
-  h1.textContent = "Hello, World!";
-
-  root.append(h1);
-  console.log("Hello console");
-  
+try {
+  const root = initializeApp();
+  const appShell = createAppShell();
+  root.append(appShell);
+} catch (error) {
+  console.error('Application initialization failed:', error);
+  document.body.innerHTML = /* html */ `<p>Sorry, the application failed to load.</p>`;
 }
-
-renderApp();
