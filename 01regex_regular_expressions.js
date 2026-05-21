@@ -4,6 +4,9 @@ const regex = /freeCodeCamp/;
 console.log(regex.test("freeCodeCamp")); // true
 console.log(regex.test("freecodecamp")); // false -> case-sensitive
 console.log(regex.test("free")) // false
+console.log(regex.test("freeCodeCamp is free")); // true
+console.log(regex.test("freecodecamp is free")); // false case sensitive
+
 
 // match -> returns array for the string
 const match = "freeCodeCamp".match(regex);
