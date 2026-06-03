@@ -16,7 +16,7 @@
 // console.log(matched.next()); // done false 
 // console.log(matched.next()); // done true
 
-const regex = /freecodecamp/g;
-const str = "freecodecamp is the best we love freecodecamp";
-const matched = str.matchAll(regex);
-console.log(Array.from(matched).map(el => el[0]));
+// const regex = /freecodecamp/g;
+// const str = "freecodecamp is the best we love freecodecamp";
+// const matched = str.matchAll(regex);
+// console.log(Array.from(matched).map(el => el[0]));
