@@ -1,0 +1,39 @@
+// function duplicateCharacterCount(str1, str2) {
+//     let count = 0;
+
+//     for (let i = 0; i < str2.length; i++) {
+
+//         for (let j = 0; j < str1.length; j++) {
+
+//             if (str2[i] === str1[j]) {
+//                 count++;
+//                 break;
+//             }
+
+//         }
+
+//     }
+
+//     return count;
+// }
+
+function duplicateCharacterCount(str1, str2) {
+    const chars = new Set(str1);
+    let count = 0;
+
+    for (const char of str2) {
+        if (chars.has(char)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log(duplicateCharacterCount("aloha", "hei"));
+console.log(duplicateCharacterCount("jambo", "bonjour"));
+console.log(duplicateCharacterCount("hello", "hola"));
+console.log(duplicateCharacterCount("ola", "hej"));
+console.log(duplicateCharacterCount("ciao", "konnichiwa"));
+console.log(duplicateCharacterCount("merhaba", "xin chao"));
+console.log(duplicateCharacterCount("hello world", "hello to everyone around the world"));
